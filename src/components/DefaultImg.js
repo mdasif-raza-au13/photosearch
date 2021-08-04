@@ -70,7 +70,7 @@ const DefaultImg = () => {
     const displayPic = picSource.map((pic, index) =>
         <Grid key={index} item xs={12} sm={4} >
             <Card className={classes.root}>
-                <CardContent>
+                <CardContent style={{ cursor: 'pointer' }} onClick={() => handleOpen(pic)}>
                     <CardMedia
                         className={classes.media}
                         image={pic}

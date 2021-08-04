@@ -6,8 +6,7 @@ import { SearchContext } from './context/SearchContext'
 
 function App() {
 
-  const [value, setValue] = useState('no suggestions')
-  console.log('App context', value)
+  const [value, setValue] = useState('')
   return (
     <>
       <SearchContext.Provider value={{ value, setValue }}>

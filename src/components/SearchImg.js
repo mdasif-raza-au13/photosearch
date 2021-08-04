@@ -47,7 +47,7 @@ const SearchImg = () => {
         const fetchData = async () => {
             try {
                 const data = await axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=dda525f9f7a6a6d62b745b310cfe9083&text=${value}&format=json&nojsoncallback=1`)
-                
+
                 let search = localStorage.getItem('search')
 
                 if (search != null) {
@@ -84,7 +84,7 @@ const SearchImg = () => {
     const displayPic = picSource.map((pic, index) =>
         <Grid key={index} item xs={12} sm={4} >
             <Card className={classes.root}>
-                <CardContent>
+                <CardContent style={{ cursor: 'pointer' }} onClick={() => handleOpen(pic)}>
                     <CardMedia
                         className={classes.media}
                         image={pic}

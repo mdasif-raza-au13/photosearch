@@ -17,18 +17,15 @@ export default function Input() {
   const { value, setValue } = useContext(SearchContext)
   const [searchList, setSearchList] = useState()
 
-  // useEffect(() => {
-  // })
-  
   useEffect(() => {
-    // localStorage.setItem(['search'],'"no data"')
+    const edgeCase = ["no suggestions"]
+    localStorage['search'] = JSON.stringify(edgeCase)
     setTimeout(() => {
       const searchList = localStorage.getItem('search')
       setSearchList(JSON.parse(searchList))
-      console.log('search',searchList)
-    },2000)
+    }, 2000)
   }, [value])
-  
+
   return (
     <Autocomplete
       id="combo-box-demo"
