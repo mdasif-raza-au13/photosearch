@@ -20,6 +20,9 @@ export default function Input() {
   useEffect(() => {
     const edgeCase = ["no suggestions"]
     localStorage['search'] = JSON.stringify(edgeCase)
+  },[])
+
+  useEffect(() => {
     setTimeout(() => {
       const searchList = localStorage.getItem('search')
       setSearchList(JSON.parse(searchList))

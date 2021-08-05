@@ -84,9 +84,8 @@ const DefaultImg = () => {
 
     return (
         <>
-            <Container>
-                <h1>default image</h1>
-                <Grid container spacing={2}>
+            <Container mt={2}>
+                <Grid container spacing={2} style={{marginTop:"2rem", marginBottom:"2rem"}}>
                     {displayPic}
                 </Grid>
             </Container>

@@ -98,9 +98,8 @@ const SearchImg = () => {
 
     return (
         <>
-            <h1>search image</h1>
             <Container>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} style={{marginTop:"2rem", marginBottom:"2rem"}}>
                     {displayPic}
                 </Grid>
             </Container>
